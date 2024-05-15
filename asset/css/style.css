@@ -183,6 +183,48 @@ li {
 
 /* Rent-Area End */
 
+/* Feature Area Start*/
+
+.feature-area {
+    box-sizing: border-box;
+    padding: 120px 0;
+    background-color: #8CB9BD;
+    background-image: linear-gradient(#090909b5, #0b0b0bd6), url(/asset/images/Mountains_\,.jpg);
+    background-repeat: no-repeat;
+    /* Ensure image is displayed only once */
+    background-position: center;
+    /* Center the image horizontally */
+    background-size: cover;
+}
+
+.feature-icon img {
+    height: 200px;
+}
+
+.feature-item {
+    background-color: var(--bgbody-font);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.feature-area .feture-head {
+    color: var(--bgbody-font);
+}
+
+.content-hr {
+    color: var(--bgbody-font);
+    margin-top: 10px;
+}
+.feture-head img{
+    height: 70px;
+}
+.feature-body{
+    color: var(--bgbody-font);
+    margin-top: 10px;
+}
+
+/* Feature Area End*/
+
 @media only screen and (max-width: 600px) {
 
     .main {
