@@ -2,3 +2,27 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
+/* Root Start */
+:root {
+    --fontnavbar: rgb(233, 154, 19);
+    --bgheadertop: black;
+    --bgbody-font: white;
+    --card: #E7E9EB;
+    --color1: #88888B;
+    --color2: #D6D6D6;
+    --color3: #3C323B;
+    --color4: #fff;
+    --color-biru1: #528ea4;
+    --color-biru2: #Adcede;
+    --color-biru3: #F7f3f7;
+}
+
+/* Root End */
+
+/* body Start */
+body {
+    background-color: #F2ece6;
+}
+
+/* Body End */
