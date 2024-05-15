@@ -47,3 +47,84 @@ body {
     font-size: 18px;
 }
 /* Navbar End */
+
+@media only screen and (max-width: 600px) {
+
+    .main {
+        margin-top: 0;
+    }
+
+    .headnav {
+        background-color: var(--color-biru1);
+    }
+   
+}
+
+@media only screen and (min-width: 600px) {
+
+    .main {
+        margin-top: 0px;
+    }
+
+    .headnav {
+        background-color: var(--color-biru1);
+    }
+
+    .carosel .carousel-item p {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .main {
+        margin-top: 0px;
+    }
+
+    .headnav {
+        background-color: var(--color-biru1);
+    }
+
+    .carousel-item .mt-5 {
+        margin-top: 1rem !important;
+        font-size: 18px;
+    }
+
+    .carousel-item p {
+        font-size: 12px;
+    }
+    
+
+}
+
+@media only screen and (min-width: 992px) {
+
+    .main {
+        margin-top: -66px;
+    }
+
+    .headnav {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .carousel-item .mt-5 {
+        margin-top: 3rem !important;
+    }
+    
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .main {
+        margin-top: -66px;
+    }
+
+    .headnav {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .carousel-item .mt-5 {
+        margin-top: 6rem !important;
+    }
+    
+}
