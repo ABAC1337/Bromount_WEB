@@ -26,3 +26,24 @@ body {
 }
 
 /* Body End */
+
+/* Navbar Start */
+.navbar-light .navbar-nav .nav-link.active {
+    color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: #fff;
+    margin-left: 30px;
+}
+.navbar-collapse ul li {
+    margin-right: 5px;
+}
+/* Navbar End */
+
+/* Navbar Start */
+.collapse {
+    flex-grow: 0;
+    font-size: 18px;
+}
+/* Navbar End */
