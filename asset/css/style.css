@@ -226,6 +226,13 @@ li {
 /* Feature Area End*/
 
 @media only screen and (max-width: 600px) {
+    .feature-area {
+        margin-top: -80px;
+    }
+
+    .feature-area .col-md-6 {
+        margin-top: 10px;
+    }
 
     .main {
         margin-top: 0;
@@ -238,6 +245,13 @@ li {
 }
 
 @media only screen and (min-width: 600px) {
+    .feature-area {
+        margin-top: -80px;
+    }
+
+    .feature-area .col-md-6 {
+        margin-top: 10px;
+    }
 
     .main {
         margin-top: 0px;
@@ -253,6 +267,13 @@ li {
 }
 
 @media only screen and (min-width: 768px) {
+    .feature-area {
+        margin-top: -80px;
+    }
+
+    .feature-area .col-md-6 {
+        margin-top: 10px;
+    }
 
     .main {
         margin-top: 0px;
@@ -275,6 +296,9 @@ li {
 }
 
 @media only screen and (min-width: 992px) {
+    .feature-area {
+        margin-top: -80px;
+    }
 
     .main {
         margin-top: -66px;
@@ -291,6 +315,9 @@ li {
 }
 
 @media only screen and (min-width: 1200px) {
+    .feature-area {
+        margin-top: -80px;
+    }
 
     .main {
         margin-top: -66px;
