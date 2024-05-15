@@ -36,9 +36,11 @@ body {
     color: #fff;
     margin-left: 30px;
 }
+
 .navbar-collapse ul li {
     margin-right: 5px;
 }
+
 /* Navbar End */
 
 /* Navbar Start */
@@ -46,6 +48,7 @@ body {
     flex-grow: 0;
     font-size: 18px;
 }
+
 /* Navbar End */
 
 /* About-Area Start*/
@@ -102,7 +105,8 @@ body {
     font-family: "Great Vibes", cursive;
     color: var(--bgbody-font);
 }
-.jeep-area .headline{
+
+.jeep-area .headline {
     font-family: "Open Sans", sans-serif;
     font-style: italic;
     color: var(--bgbody-font);
@@ -144,15 +148,18 @@ body {
 li {
     list-style: none;
 }
+
 .jeep-area .btn {
     background-color: var(--color-biru2);
     border-radius: 15px;
     padding: 10px;
     width: 60%;
 }
-.jeep-area .btn:hover{
+
+.jeep-area .btn:hover {
     color: black;
 }
+
 /* jeep-area End */
 
 /* Rent-Area Start */
@@ -171,13 +178,15 @@ li {
     line-height: 2em;
     padding: 20px;
 }
+
 .rent-area .btn {
     background-color: var(--color-biru2);
     border-radius: 15px;
     padding: 10px;
     width: 30%;
 }
-.rent-area .btn:hover{
+
+.rent-area .btn:hover {
     color: black;
 }
 
@@ -215,10 +224,12 @@ li {
     color: var(--bgbody-font);
     margin-top: 10px;
 }
-.feture-head img{
+
+.feture-head img {
     height: 70px;
 }
-.feature-body{
+
+.feature-body {
     color: var(--bgbody-font);
     margin-top: 10px;
 }
@@ -227,85 +238,140 @@ li {
 
 /* Owl*/
 #owl-demo .item {
-  padding: 30px 0px;
-  margin: 10px;
-  color: #fff;
-  border-radius: 3px;
-  text-align: center;
+    padding: 30px 0px;
+    margin: 10px;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
 }
+
 #owl-demo .item img {
     width: px;
 }
+
 #owl-demo button {
-  height: 40px;
+    height: 40px;
 }
 
 /* Contact-Us Start */
 .contact-us-arrow {
     padding-left: 200px;
     padding-right: 200px;
-  }
-  .contact-us {
+}
+
+.contact-us {
     background-color: #528ea4;
     padding: 45px;
-  }
-  .contact-us .btn {
+}
+
+.contact-us .btn {
     margin-top: 20px;
     margin-bottom: 20px;
-  }
-  .contact-us {
+}
+
+.contact-us {
     color: var(--bgbody-font);
-  }
-  .contact-us .btn {
+}
+
+.contact-us .btn {
     background-color: var(--bgbody-font);
     border-radius: 15px;
     padding: 10px;
     width: 60%;
     color: var(--color-biru1);
-  }
-  
-  .contact-us h2 {
+}
+
+.contact-us h2 {
     font-weight: bold;
-  }  
-  /* Contact-Us End */
+}
+
+/* Contact-Us End */
+
+
+/* footer Start */
+.footer-area {
+    color: var(--bgbody-font);
+    font-size: 17px;
+}
+
+.footer-area .footer-logo img {
+    height: 40px;
+}
+
+.footer-area .icon-footer {
+    padding-top: 15px;
+    display: flex;
+}
+
+.footer-area .icon-footer .left {
+    margin-left: 25px;
+}
+
+.footer-area .icon-block .icon {
+    margin-right: 25px;
+    margin-top: 10px;
+}
+
+.footer-area .title-footer h5 {
+    font-weight: bolder;
+    font-size: 30px;
+}
+
+/* footer end */
 
 @media only screen and (max-width: 600px) {
-    
+
     .main {
         margin-top: 0;
     }
+
     .headnav {
         background-color: var(--color-biru1);
     }
+
     .feature-area {
         margin-top: -80px;
     }
+
     .feature-area .col-md-6 {
         margin-top: 10px;
     }
+
     .contact-us .left {
         display: none;
-      }
-      .contact-us-arrow {
+    }
+
+    .contact-us-arrow {
         padding-left: 0px;
         padding-right: 0px;
-      }
-   
+    }
+    .footer-area .icon-footer{
+        padding-top: 15px;
+        display: block;
+    }
+    .footer-area .footer-logo img{
+        width: 150PX;
+    }
+    .footer-area .icon-footer .left{
+        margin-left: 0px;
+    }
+
 }
 
 @media only screen and (min-width: 600px) {
-    
+
     .main {
         margin-top: 0px;
     }
-    
+
     .headnav {
         background-color: var(--color-biru1);
     }
-    
+
     .carosel .carousel-item p {
         font-size: 12px;
     }
+
     .feature-area {
         margin-top: -80px;
     }
@@ -316,7 +382,7 @@ li {
 }
 
 @media only screen and (min-width: 768px) {
-    
+
     .main {
         margin-top: 0px;
     }
@@ -324,15 +390,16 @@ li {
     .headnav {
         background-color: var(--color-biru1);
     }
-    
+
     .carousel-item .mt-5 {
         margin-top: 1rem !important;
         font-size: 18px;
     }
-    
+
     .carousel-item p {
         font-size: 12px;
     }
+
     .feature-area {
         margin-top: -80px;
     }
@@ -340,42 +407,44 @@ li {
     .feature-area .col-md-6 {
         margin-top: 10px;
     }
-    
-    
+
+
 }
 
 @media only screen and (min-width: 992px) {
-    
+
     .main {
         margin-top: -66px;
     }
-    
+
     .headnav {
         background-color: rgba(0, 0, 0, 0.6);
     }
-    
+
     .carousel-item .mt-5 {
         margin-top: 3rem !important;
     }
+
     .feature-area {
         margin-top: -80px;
     }
-    
+
 }
 
 @media only screen and (min-width: 1200px) {
-    
+
     .main {
         margin-top: -66px;
     }
-    
+
     .headnav {
         background-color: rgba(0, 0, 0, 0.6);
     }
-    
+
     .carousel-item .mt-5 {
         margin-top: 6rem !important;
     }
+
     .feature-area {
         margin-top: -80px;
     }
