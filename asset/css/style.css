@@ -17,8 +17,15 @@
   --color-biru2: #adcede;
   --color-biru3: #f7f3f7;
 }
-
 /* Root End */
+
+@font-face {
+    font-family: 'redressedregular';
+    src: url('/asset/font/Redressed-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 
 /* body Start */
 body {
