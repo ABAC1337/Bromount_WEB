@@ -80,10 +80,10 @@ body {
 }
 
 .about-area .container .col-lg-6 .about-right .side-title {
-  font-weight: 500;
+  font-weight: bolder;
   text-transform: capitalize;
-  font-size: 60px;
-  font-family: "Great Vibes", cursive;
+  font-size: 70px;
+  font-family: "redressedregular";
   font-weight: 700;
   margin-bottom: 1em;
 }
