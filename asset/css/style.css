@@ -107,9 +107,9 @@ body {
 }
 
 .jeep-area .headline .title {
-  font-weight: 600px;
-  font-size: 40px;
-  font-family: "Great Vibes", cursive;
+  font-weight: bolder;
+  font-size: 60px;
+  font-family: "redressedregular";
   color: var(--bgbody-font);
 }
 
