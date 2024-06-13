@@ -125,6 +125,8 @@ body {
   margin-left: 25px;
   margin-right: 25px;
   border-radius: 10px;
+  font-family: "Open Sans";
+  font-size: 15px;
   background-color: var(--bgbody-font);
   color: var(--bgheadertop);
 }
@@ -143,13 +145,24 @@ body {
 }
 
 .jeep-area .jeephead span {
+  font-family: "Open Sans", sans-serif;
   font-size: 18px;
 }
 
 .jeep-area .headline h2 {
-  font-family: "Road Rage", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 70px;
   color: #fff;
+}
+
+.jeep-area h4 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.jeep-area h5 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
 }
 
 li {
