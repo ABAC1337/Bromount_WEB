@@ -1,5 +1,5 @@
 # denpendencies
-node_modules
+node_modules/
 
 # secret :)
-.env
+environment/
