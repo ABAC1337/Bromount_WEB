@@ -1,3 +1,4 @@
+const { text } = require('express');
 const mongoose = require('mongoose');
 
 
@@ -17,8 +18,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    refresh_token: {
+        type: String
+    }
 }, {
-    timestamps: true, // Automatically creates 'createdAt' and 'updatedAt' fields
+    timestamps: true,
 });
 
 
