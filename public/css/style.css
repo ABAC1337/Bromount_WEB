@@ -365,6 +365,7 @@ body .tb {
   flex: end;
 }
 /* register */
+/* Register */
 .form-register {
   display: none;
   z-index: 1;
@@ -403,6 +404,7 @@ body .tb {
 .form .card span:hover {
   color: blue;
 }
+
 /* dashboar User */
 .dashboard .container .card {
   border-radius: 15px;
@@ -419,6 +421,25 @@ body .tb {
 }
 .dashboard .container .card-body {
   padding: 15px;
+}
+
+/* Dashboard User Button */
+.btn-dashboard {
+  background-color: var(--color-biru2); /* Use a variable from your root for consistency */
+  color: var(--bgbody-font); /* Use a variable from your root for consistency */
+  font-weight: bold; /* Bold text */
+  border: none; /* Remove border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 10px 20px; /* Padding for the button */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 15px; /* Space from top */
+}
+
+/* Button Hover State */
+.btn-dashboard:hover {
+  background-color: var(--color-biru1); /* Change background color on hover */
+  color: #fff; /* Keep text white on hover */
 }
 
 /* Admin */
