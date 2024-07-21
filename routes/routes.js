@@ -5,14 +5,13 @@ const {homeRoute} = require('./home/homePage')
 const {loginRoute} = require('./user/login_register')
 const {dashboardRoute} = require('./dashboard/dashboard')
 
-const {verifySession} = require('../auth/verifySession')
 
 // home
 rootRoutes.use('/',homeRoute)
 // login and register
 rootRoutes.use('/login',loginRoute)
 // user dashboard
-rootRoutes.use('/dashboard',verifySession, dashboardRoute)
+rootRoutes.use('/dashboard', dashboardRoute)
 
 module.exports ={
     rootRoutes

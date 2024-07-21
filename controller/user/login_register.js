@@ -84,33 +84,6 @@ const loginSubmit = async (req, res) => {
       });
     }
 
-    // Create tokens
-    const accessToken = jwt.sign(
-      { user_id: user._id, username: user.username },
-      process.env.ACCESS_TOKEN_SECRET,
-      { expiresIn: "15m" }
-    );
-
-    const refreshToken = jwt.sign(
-      { user_id: user._id },
-      process.env.REFRESH_TOKEN_SECRET,
-      { expiresIn: "7d" }
-    );
-
-    // Store refreshToken in user document
-    user.refresh_token = refreshToken;
-    await user.save();
-
-    // Set cookies for tokens
-    res.cookie("accessToken", accessToken, {
-      httpOnly: true,
-      maxAge: 15 * 60 * 1000, // 15 minutes
-    });
-
-    res.cookie("refreshToken", refreshToken, {
-      httpOnly: true,
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days
-    });
 
     req.session.username = user.username;  // Set username in session
     console.log("User logged in:", user.username);
@@ -125,43 +98,10 @@ const loginSubmit = async (req, res) => {
   }
 };
 
-const refreshToken = async (req, res) => {
-  try {
-    const refreshToken = req.cookies.refreshToken;
-
-    if (!refreshToken) {
-      return res.sendStatus(401);
-    }
-
-    jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, async (err, decoded) => {
-      if (err) {
-        console.error("Error verifying refresh token:", err);
-        return res.sendStatus(403);
-      }
-
-      const user = await User.findById(decoded.user_id);
-
-      if (!user || user.refresh_token !== refreshToken) {
-        return res.sendStatus(403);
-      }
-
-      const accessToken = jwt.sign(
-        { user_id: user._id, username: user.username },
-        process.env.ACCESS_TOKEN_SECRET,
-        { expiresIn: "15m" }
-      );
-
-      res.json({ accessToken });
-    });
-  } catch (error) {
-    console.error("Error in refreshToken function:", error);
-    res.sendStatus(500);
-  }
-};
 
 module.exports = {
   loginPage,
   registerSubmit,
   loginSubmit,
-  refreshToken,
+
 };

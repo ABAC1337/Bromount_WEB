@@ -7,7 +7,7 @@ const {rootRoutes}= require('./routes/routes');
 const cookieParser = require("cookie-parser");
 const session = require('express-session');
 
-dotenv.config({ path: path.join(__dirname, './environment/.env') });
+dotenv.config({ path: path.join(__dirname, './.env') });
 const server = express()
 const publcpath = path.join(__dirname,'./public')
 const viewspath = path.join(__dirname, "./template/views")
