@@ -12,10 +12,8 @@ const registerSubmit = async (req, res) => {
 
     // Check if all fields are filled
     if (!usernameregist || !emailregist || !passwordregist || !confirmpasswordregist) {
-      return res.status(400).render("login", {
-        error: "Please fill in all fields",
-        showErrorReg: true,
-      });
+      req.flash("error", "Please fill in all fields");
+      return res.status(400).redirect("/login");
     }
 
     // Check if the user already exists
@@ -24,10 +22,8 @@ const registerSubmit = async (req, res) => {
     });
 
     if (checkExistingUser) {
-      return res.status(400).render("login", {
-        error: "User already exists",
-        showErrorReg: true,
-      });
+      req.flash("error", "User already exists");
+      return res.status(400).redirect("/login");
     }
 
     // Hash the password
@@ -42,16 +38,11 @@ const registerSubmit = async (req, res) => {
     });
 
     // Redirect to login page with success message
-    res.render("login", {
-      success: "User created successfully",
-      succeededReg: true,
-    });
+    req.flash("success", "Registration successful");
+    res.redirect("/login");
   } catch (error) {
-    console.error("Error registering user:", error);
-    res.status(500).render("login", {
-      error: "Error registering user",
-      showErrorReg: true,
-    });
+    req.flash("error", error.message);
+    res.status(500).redirect("/login");
   }
 };
 
