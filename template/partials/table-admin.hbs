@@ -1,0 +1,43 @@
+<div class="table-via my-5">
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <img src="/images/logo2.png" alt="" height="35" class="my-3" />
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col th-left" style="border-top-left-radius: 5px;">No</th>
+                            <th scope="col" style="text-align: center;">Via</th>
+                            <th scope="col" style="text-align: center;">Price</th>
+                            <th scope="col" style="text-align: center;">Contact</th>
+                            <th scope="col" style="text-align: center;">Created At</th>
+                            <th scope="col" style="text-align: end;border-top-right-radius: 5px;">Admin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each packages}}
+                        <tr>
+                            <th scope="row">{{@index}}</th>
+                            <td style="text-align: center; font-weight:bolder">{{this.via}}</td>
+                            <td style="text-align: center; font-weight:bolder">{{this.harga}}</td>
+                            <td style="text-align: center; font-weight:bolder">{{this.noHp}}</td>
+                            <td style="text-align: center; font-weight:bolder">{{this.createdAt}}</td>
+                            <td style="text-align: end;">
+                                <button type="button" style="border: none;"
+                                    onclick="showTable('{{this.id}}')"><i
+                                        class='bx bxs-edit'></i></button>
+                                <button onclick="ShowWarningDelete('{{this._id}}')" type="button" style="border: none;"><i
+                                        class='bx bxs-trash'></i></button>
+                            </td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                <div class="text-end">
+            <button type="button" style="border: none;"><i class='bx bxs-book-add bx-sm'
+                    onclick="document.getElementById('add').style.display='block'"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<div class="order" id="order-add" style="display:none;">
+    <div class="packages-via-order">
+        <div class="card mb-3 p-1" style="max-width: 640px;border-radius: 10px;">
+            <div class="right text-end mx-2">
+                <span onclick="document.getElementById('order-add').style.display='none'" class="close"
+                    title="Close">×</span>
+            </div>
+            <div class="content-card-order">
+                <div class="row g-0 p-2">
+                    <div class="col-md-6">
+                        <img id="order-img" src="" class="img-fluid rounded-start" alt="..."
+                            style="border-radius: 5px;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-title" id="order-title" style="font-weight: bolder;"></p>
+                            <hr>
+                            <p class="card-text"><i class='bx bx-check-double'></i><small class="text-muted">PENANJAKAN
+                                    1</small></p>
+                            <p class="card-text"><i class='bx bx-check-double'></i><small class="text-muted">PASIR
+                                    BERBISIK</small></p>
+                            <p class="card-text"><i class='bx bx-check-double'></i><small class="text-muted">WIDODAREN
+                                    VIEW</small></p>
+                            <p class="card-text"><i class='bx bx-check-double'></i><small class="text-muted">GUNUNG
+                                    BROMO</small></p>
+                            <div class="input-vie text-center mt-3">
+                                <h6 id="order-price" style="font-weight: bold;"></h6>
+                                <div class="order-add">
+                                    <div class="date-time text-start mb-2">
+                                        <input required type="date" name="orderDate" id="order-date" oninput="updateOrderDate()">
+                                    </div>
+                                    {{!-- error --}}
+                                    <div class="button-wrapper d-flex" style="gap: 10px;">
+                                        <form action="/dashboard/user/add-order" method="POST" style="flex: 1;">
+                                            <input type="hidden" id="order-id" name="packageId">
+                                            <input type="hidden" id="add-order-date" name="orderDate">
+                                            <button class="btn p-1" type="submit"
+                                            style="background-color: #ff7a00; width: 100%; color: #fff; font-weight: bold;border-radius: 10px;">Order
+                                            Now</button>
+                                        </form>
+                                        <form action="/dashboard/user/add-cart" method="POST" style="flex: 1;">
+                                            <input type="hidden" id="cart-id" name="packageId">
+                                            <input type="hidden" id="add-cart-date" name="orderDate">
+                                            <button class="btn p-1" type="submit"
+                                            style="background-color: #ff7a00; width: 100%; color: #fff; font-weight: bold;border-radius: 10px;">Add
+                                            To Cart</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="desc px-5 mb-3">
+                <p class="card-title" style="font-weight: bolder;">Description</p>
+                <hr>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod rerum id, illum
+                    iusto unde mollitia, expedita magnam ratione nihil aut voluptatem, consequuntur molestiae!
+                    Aperiam, beatae.</p>
+            </div>
+        </div>
+    </div>
+</div>
