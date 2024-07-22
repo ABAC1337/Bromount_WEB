@@ -1,0 +1,132 @@
+<div class="packages-page-user" id="packages-user">
+    <div class="header" style="font-weight: bold;">
+        <h3>Packages</h3>
+        <hr>
+    </div>
+    <div class="packages-via" style="margin-left:25px;">
+        <div class="d-flex" style="gap:15px;flex-wrap:wrap">
+            {{#each Malang}}
+            <div class="wrapper-card">
+            <h3>{{via}}</h3>
+            <div class="card mb-3 p-1 package-card" style="max-width: 540px;border-radius: 10px;"
+                data-package="{{this}}">
+                <div class="row g-0 p-2">
+                    <div class="col-md-6">
+                        <img src="{{this.fotourl}}" class="img-fluid rounded-start" alt="..."
+                            style="border-radius: 5px;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bolder;">{{this.via}}</p>
+                            <hr>
+                            {{#each rute}}
+                            <p class="card-text"><i class='bx bx-check-double'></i><small
+                                    class="text-muted">{{this}}</small></p>
+                            {{/each}}
+                            <div class="input-vie text-center">
+                                <h6>{{formatCurrency this.harga}}</h6>
+                                <i class='bx bxs-right-arrow-circle bx-md' style='color:#ff7a00'
+                                    onclick="showOrderPopup('{{this.fotourl}}', '{{this.via}}', '{{formatCurrency this.harga}}', '{{this._id}}')"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="d-flex" style="gap:15px;flex-wrap:wrap">
+            {{#each Pasuruan}}
+            <div class="wrapper-card">
+            <h3>{{via}}</h3>
+            <div class="card mb-3 p-1 package-card" style="max-width: 540px;border-radius: 10px;"
+                data-package="{{this}}">
+                <div class="row g-0 p-2">
+                    <div class="col-md-6">
+                        <img src="{{this.fotourl}}" class="img-fluid rounded-start" alt="..."
+                            style="border-radius: 5px;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bolder;">{{this.via}}</p>
+                            <hr>
+                            {{#each rute}}
+                            <p class="card-text"><i class='bx bx-check-double'></i><small
+                                    class="text-muted">{{this}}</small></p>
+                            {{/each}}
+                            <div class="input-vie text-center">
+                                <h6>{{formatCurrency this.harga}}</h6>
+                                <i class='bx bxs-right-arrow-circle bx-md' style='color:#ff7a00'
+                                    onclick="showOrderPopup('{{this.fotourl}}', '{{this.via}}', '{{formatCurrency this.harga}}', '{{this._id}}')"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="d-flex" style="gap:15px;flex-wrap:wrap">
+            {{#each Probolinggo}}
+            <div class="wrapper-card">
+            <h3>{{via}}</h3>
+            <div class="card mb-3 p-1 package-card" style="max-width: 540px;border-radius: 10px;"
+                data-package="{{this}}">
+                <div class="row g-0 p-2">
+                    <div class="col-md-6">
+                        <img src="{{this.fotourl}}" class="img-fluid rounded-start" alt="..."
+                            style="border-radius: 5px;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bolder;">{{this.via}}</p>
+                            <hr>
+                            {{#each rute}}
+                            <p class="card-text"><i class='bx bx-check-double'></i><small
+                                    class="text-muted">{{this}}</small></p>
+                            {{/each}}
+                            <div class="input-vie text-center">
+                                <h6>{{formatCurrency this.harga}}</h6>
+                                <i class='bx bxs-right-arrow-circle bx-md' style='color:#ff7a00'
+                                    onclick="showOrderPopup('{{this.fotourl}}', '{{this.via}}', '{{formatCurrency this.harga}}', '{{this._id}}')"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class="d-flex" style="gap:15px;flex-wrap:wrap">
+            {{#each Lumajang}}
+            <div class="wrapper-card">
+            <h3>{{via}}</h3>
+            <div class="card mb-3 p-1 package-card" style="max-width: 540px;border-radius: 10px;"
+                data-package="{{this}}">
+                <div class="row g-0 p-2">
+                    <div class="col-md-6">
+                        <img src="{{this.fotourl}}" class="img-fluid rounded-start" alt="..."
+                            style="border-radius: 5px;">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <p class="card-text" style="font-weight: bolder;">{{this.via}}</p>
+                            <hr>
+                            {{#each rute}}
+                            <p class="card-text"><i class='bx bx-check-double'></i><small
+                                    class="text-muted">{{this}}</small></p>
+                            {{/each}}
+                            <div class="input-vie text-center">
+                                <h6>{{formatCurrency this.harga}}</h6>
+                                <i class='bx bxs-right-arrow-circle bx-md' style='color:#ff7a00'
+                                    onclick="showOrderPopup('{{this.fotourl}}', '{{this.via}}', '{{formatCurrency this.harga}}', '{{this._id}}')"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
