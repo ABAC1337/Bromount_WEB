@@ -1,0 +1,38 @@
+<div class="card-page-user" style="width: 100%;" id="cart">
+  <h3 style="font-weight: bolder;">Cart</h3>
+  <div class="wrapper-card-cart">
+    {{#each cart}}
+    <div class="card card-page justify-content-between mb-4" style="max-width: 100%;flex-direction: row;">
+      <div class="row">
+        <div class="card-body d-flex">
+          <div class="content-page">
+            <div class="left photo-card " style="margin-right: 5px;">
+              <img src="{{this.packageId.fotourl}}" class="img-fluid rounded-start" alt="..." />
+            </div>
+            <div class="left my-auto">
+              <p style="font-weight: bolder;">Via {{this.packageId.via}}</p>
+              <p>{{this.userId.username}}</p>
+              <p style="font-weight: bolder;">{{this.orderDate}}</p>
+              <p>{{formatCurrency this.packageId.price}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row card-button">
+        <form action="/dashboard/user/delete-cart" method="post">
+          <input type="hidden" name="cartId" value="{{this._id}}" />
+          <button type="submit" class="btn"
+            style="background-color: #FF4646; border-radius: 0;height: 100%;width: 100%;"><i class="bx bxs-trash bx-sm"
+              style="color:#ffffff"></i></button>
+        </form>
+        <form action="/dashboard/user/cart-to-order" method="post">
+          <input type="hidden" name="cartId" value="{{this._id}}" />
+          <button type="submit" class="btn"
+            style="background-color: #FCA759; border-radius: 0;height: 100%;width: 100%;"><i
+              class="bx bx-right-arrow-alt bx-sm" style="color:#ffffff"></i></button>
+        </form>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

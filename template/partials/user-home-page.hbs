@@ -1,0 +1,46 @@
+<div class="home-page-user" id="home">
+    <div class="head-page" style="line-height: normal;">
+        <h3 style="font-weight: bolder;"><i>Hello, {{name}}</i></h3>
+        <p style="font-weight: bolder;"><i>Let's Travel Around Bromo</i></p>
+    </div>
+    <div class="Advertisement row">
+        <div class="col">
+            <img src="/images/paket foto fix 1.png" class="img-fluid" alt="Responsive image">
+        </div>
+        <div class="col">
+            <img src="/images/paket foto fix 1.png" class="img-fluid" alt="Responsive image">
+        </div>
+    </div>
+    <h3 style="font-weight: bold; margin-bottom: 15px; margin-top: 15px;">Upcoming Schedule</h3>
+    <div class="packages-home d-flex" style="gap: 15px;">
+        <div class="card mb-3 p-1" style="max-width: 440px;border-radius: 15px;">
+            <div class="row g-0">
+                {{#each SuccessOrder}}
+                <div class="card-header d-flex justify-content-between mb-2" style="background-color: transparent; ">
+                    <img src="/images/Group 16.png" class="img-fluid rounded-start" alt="..." style="height: 35px;">
+                    <h5 class="card-title" style="font-weight: bolder;">{{this.statusOrder}}</h5>
+                </div>
+                <div class="col-md-5">
+                    <img src="{{this.packageId.fotourl}}" class="img-fluid rounded-start" alt="...">
+                </div>
+                <div class="col-md-7">
+                    <div class="card-body">
+                        <p class="card-text">{{this.userId.username}}</p>
+                        <p class="card-text" style="font-weight: bolder;">{{this.packageId.via}}</p>
+                        <p class="card-text">{{this.orderDate}}</p>
+                        <p class="card-text mt-5" style="text-align: end;color: #FF7A00;cursor: pointer;" onclick="document.getElementById('invoice').style.display='block'">
+                            Invoice</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="foot">
+        <div class="container text-center">
+            <p style="margin-top: 50px;">All rights reserved.</p>
+            <p style="margin-top: -15px;">Copyright (2024 - 2024) - Bromunt</p>
+            <img src="/images/logo2.png" alt="Logo" style="height: 55px; margin-top: 10px;" />
+        </div>
+    </div>
+</div>
