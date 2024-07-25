@@ -61,7 +61,7 @@ const generateAccessToken = (user_id, username, email) => {
   },
     process.env.ACCESS_TOKEN_SECRET,
     {
-      expiresIn: "7s",
+      expiresIn: "1d",
     });
 };
 
@@ -73,7 +73,7 @@ const generateRefreshToken = (user_id, username, email) => {
   },
     process.env.REFRESH_TOKEN_SECRET,
     {
-      expiresIn: "30m",
+      expiresIn: "7d",
     });
 };
 
