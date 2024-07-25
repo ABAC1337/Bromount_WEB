@@ -13,9 +13,9 @@
     </div>
     <h3 style="font-weight: bold; margin-bottom: 15px; margin-top: 15px;">Upcoming Schedule</h3>
     <div class="packages-home d-flex" style="gap: 15px;">
+        {{#each SuccessOrder}}
         <div class="card mb-3 p-1" style="max-width: 440px;border-radius: 15px;">
             <div class="row g-0">
-                {{#each SuccessOrder}}
                 <div class="card-header d-flex justify-content-between mb-2" style="background-color: transparent; ">
                     <img src="/images/Group 16.png" class="img-fluid rounded-start" alt="..." style="height: 35px;">
                     <h5 class="card-title" style="font-weight: bolder;">{{this.statusOrder}}</h5>
@@ -32,9 +32,9 @@
                             Invoice</p>
                     </div>
                 </div>
-                {{/each}}
             </div>
         </div>
+    {{/each}}
     </div>
     <div class="foot">
         <div class="container text-center">
