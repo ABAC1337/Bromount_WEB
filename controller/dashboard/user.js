@@ -16,7 +16,7 @@ const userDashboardPage = async (req, res) => {
       console.log(order._id);
     });
 
-    const invoicePromises = SuccessOrder.map(order => 
+    const invoicePromises = SuccessOrder.map(order =>
       Transaction.find({ orderId: order._id }).populate(["orderId"])
     );
 
@@ -34,34 +34,48 @@ const userDashboardPage = async (req, res) => {
 };
 
 const CartPage = async (req, res) => {
-  const session = req.session.user;
-  const cart = await Cart.find({ userId: session.user_id }).populate(["packageId", "userId"]);
-  res.render("dashboard-user-cart",{
-    cart
-  });
+  try {
+    const session = req.session.user;
+    const cart = await Cart.find({ userId: session.user_id }).populate(["packageId", "userId"]);
+    res.render("dashboard-user-cart", {
+      cart
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 };
 
 const PackagesPage = async (req, res) => {
-  const Malangdb = await Packages.find({ via:'Malang' })
-  const Pasuruandb = await Packages.find({ via:'Pasuruan' })
-  const Probolinggodb = await Packages.find({ via:'Probolinggo' })
-  const Lumajangdb = await Packages.find({ via:'Lumajang' })
+  try {
+    const Malangdb = await Packages.find({ via: 'Malang' })
+    const Pasuruandb = await Packages.find({ via: 'Pasuruan' })
+    const Probolinggodb = await Packages.find({ via: 'Probolinggo' })
+    const Lumajangdb = await Packages.find({ via: 'Lumajang' })
 
-  res.render("dashboard-user-packages", {
-    Malang : Malangdb,
-    Pasuruan : Pasuruandb,
-    Probolinggo:Probolinggodb,
-    Lumajang :Lumajangdb
-  });
-
+    res.render("dashboard-user-packages", {
+      Malang: Malangdb,
+      Pasuruan: Pasuruandb,
+      Probolinggo: Probolinggodb,
+      Lumajang: Lumajangdb
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 };
 
 const PaymentPage = async (req, res) => {
-  const session = req.session.user;
-  const orderDb = await Order.find({ userId: session.user_id, statusOrder: 'Pending' }).populate(["packageId", "userId"]);
-  res.render("dashboard-user-payment", {
-    order: orderDb
-  });
+  try {
+    const session = req.session.user;
+    const orderDb = await Order.find({ userId: session.user_id, statusOrder: 'Pending' }).populate(["packageId", "userId"]);
+    res.render("dashboard-user-payment", {
+      order: orderDb
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 };
 
 
