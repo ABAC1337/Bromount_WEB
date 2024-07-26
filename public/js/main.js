@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initialize Owl Carousel
   var owl = document.querySelector('#owl-demo');
   if (owl) {
-    $(owl).owlCarousel({
+    (owl).owlCarousel({
       loop: true,
       items: 5, // 10 items above 1000px browser width
       itemsDesktop: [1000, 4], // 5 items between 1000px and 901px
