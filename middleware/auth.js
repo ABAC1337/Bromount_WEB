@@ -2,7 +2,7 @@ const jwt = require('jsonwebtoken');
 const User = require('../models/userModel');
 const Admin = require('../models/adminModel');
 
-const tokenValidator = async (token, secret, refreshToken) => {
+const tokenValidator = async (token, secret) => {
     try {
         const decoded = jwt.verify(token, secret);
         let user = await User.findOne({ _id: decoded.user_id });
@@ -16,33 +16,7 @@ const tokenValidator = async (token, secret, refreshToken) => {
             throw new Error("User or Admin not found");
         }
     } catch (error) {
-        if (error.name === "TokenExpiredError") {
-            try {
-                const rDecoded = jwt.decode(refreshToken);
-
-                if (!rDecoded || !rDecoded.user_id) {
-                    console.error("Error decoding refresh token:", rDecoded);
-                }
-
-                const admin = await Admin.findOne({ _id: rDecoded.user_id });
-                const user = await User.findOne({ _id: rDecoded.user_id });
-
-                if (admin) {
-                    return { rDecoded, admin };
-                } else if (user) {
-                    return { rDecoded, user };
-                } else {
-                    return null;
-                }
-                
-            } catch (error) {
-                console.error("Error refreshing token:", error);
-                return null;
-            }
-        } else {
-            console.error("Error verifying token:", error);
-            return null;
-        }
+        return null;
     }
 };
 
