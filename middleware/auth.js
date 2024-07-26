@@ -25,13 +25,13 @@ const authUser = async (req, res, next) => {
         const session = req.session.auth;
         if (!session || !session.accessToken || !session.refreshToken || session.role === "admin") {
             req.flash("error", "Session expired. Please log in again.");
-            session.destroy();
+            req.session.destroy();
             return res.redirect("/login");
         }
         const result = await tokenValidator(session.accessToken, process.env.ACCESS_TOKEN_SECRET,session.refreshToken);
         if (!result || !result.user) {
             req.flash("error", "Invalid access token");
-            session.destroy();
+            req.session.destroy();
             return res.redirect("/login");
         }
 
@@ -45,7 +45,7 @@ const authUser = async (req, res, next) => {
     } catch (error) {
         console.error("AuthUser error:", error);
         req.flash("error", "Invalid access token");
-        session.destroy();
+        req.session.destroy();
         res.redirect("/login");
     }
 };
