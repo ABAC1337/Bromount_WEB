@@ -9,7 +9,7 @@ const {authUser, authAdminMaster, authAdmin } = require('../../middleware/auth')
 
 const router = express.Router()
 
-router.use('/user',authUser, userRoute)
+router.use('/user', userRoute)
 router.use('/admin',authAdmin, adminRoute)
 router.use('/master',authAdminMaster, masterRoute)
 router.post('/logout', logout)
