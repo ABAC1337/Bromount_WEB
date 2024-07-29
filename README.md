@@ -58,3 +58,12 @@ To run tests, run the following command
 
 when its deployment there some error with the token (jwt), but when run in local completely work fine
 
+## Authors
+
+- [@also me](https://github.com/notABAC)
+- [@niko](https://github.com/Hypermaniax)
+- [@bina](https://github.com/binawwww)
+- [@okzen](https://github.com/cantikaokzen)
+- [@anas](https://github.com/Paesall)
+
+
